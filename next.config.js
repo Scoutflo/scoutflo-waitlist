@@ -13,7 +13,15 @@ const nextConfig = {
     loader: 'akamai',
     path: '',
   },
+  // Add this to ensure proper routing
+  async rewrites() {
+    return [
+      {
+        source: '/waitlist',
+        destination: '/waitlist',
+      },
+    ];
+  },
 };
 
-// Pass an array of modules to transpile
 module.exports = withTM(['lucide-react'])(nextConfig);

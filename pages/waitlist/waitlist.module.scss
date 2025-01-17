@@ -1,0 +1,22 @@
+.carousel {
+  @apply flex gap-4 w-full mb-12;
+}
+
+.carousel_item {
+  @apply max-w-[240px] flex-shrink-0 h-full flex gap-4;
+  animation: infinite-carousel 20s infinite linear;
+  background: #000;
+  border: none;
+  padding: 6px;
+}
+
+@keyframes infinite-carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-280px * 5)
+    ); /* Adjust the translation based on the number of slides and their width */
+  }
+}

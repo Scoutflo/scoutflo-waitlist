@@ -1,1 +1,1 @@
-# Scoutfo Deploy Client
+# Scoutfo Waitlist

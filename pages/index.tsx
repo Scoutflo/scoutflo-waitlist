@@ -15,7 +15,7 @@ import {
   CardTitle,
 } from 'components/ui/card';
 import Icon from 'components/ui/icon';
-import styles from './waitlist.module.scss';
+import styles from '../styles/waitlist.module.scss';
 
 export const WAITING_LIST_INPUTS = [
   {

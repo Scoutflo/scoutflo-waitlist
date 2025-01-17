@@ -1,0 +1,25 @@
+{
+    "rewrites": [
+        {
+            "source": "/waitlist",
+            "destination": "/"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/waitlist",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=0, must-revalidate"
+                }
+            ]
+        }
+    ],
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/node"
+        }
+    ]
+}

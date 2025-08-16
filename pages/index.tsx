@@ -120,11 +120,12 @@ const WaitingList = () => {
 
   const postData = async (url: string, data: z.infer<typeof formSchema>) => {
     try {
-      const response = await axios.post(url, data, {
+      await axios.post(url, data, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
+
       toast({
         title: 'Added to waitlist!',
       });
@@ -151,7 +152,7 @@ const WaitingList = () => {
       <DefaultSeo
         title="Scoutflo: Manage production-ready Open-source apps on Kubernetes"
         description="Scoutflo is an automated GitOps platform that makes it easy to deploy and manage production-ready Open-source apps on Kubernetes."
-        canonical="https://deploy.scoutflo.com/waitlist"
+        canonical="https://waitlist.scoutflo.com"
         openGraph={{
           title:
             'Scoutflo: Manage production-ready Open-source apps on Kubernetes',

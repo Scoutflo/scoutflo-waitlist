@@ -1,0 +1,19 @@
+{
+    "rewrites": [
+        {
+            "source": "/waitlist",
+            "destination": "/waitlist"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/waitlist",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=0, must-revalidate"
+                }
+            ]
+        }
+    ]
+}

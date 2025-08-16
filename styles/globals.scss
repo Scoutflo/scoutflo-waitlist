@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --support: #0070f0;
+    --support-foreground: #f2f2f2;
+
+    --support: #0070f0;
+    --support-foreground: #f2f2f2;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --chart: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+
+    // Primary brand
+    --primary-brand: #090a40;
+
+    --matte-dark-gray: #272727;
+
+    // Primary Blue
+    --primary-blue-10: #e0f2fe;
+    --primary-blue-20: #b9e6fe;
+    --primary-blue-50: #36bffa;
+    --primary-blue-100: #2aaaf4;
+    --primary-blue-200: #0086c9;
+    --primary-blue-500: #026aa2;
+    --primary-blue-1000: #065986;
+
+    // Primary Dark Blue
+    --primary-dark-blue-10: #e3e6f0;
+    --primary-dark-blue-20: #c7cce0;
+    --primary-dark-blue-50: #5765a0;
+    --primary-dark-blue-80: #282f53;
+    --primary-dark-blue-100: #1f3180;
+    --primary-dark-blue-200: #192764;
+    --primary-dark-blue-500: #090a40;
+    --primary-dark-blue-1000: #090d1e;
+
+    // Accent
+    --accent-orange-10: #ffe9cf;
+    --accent-orange-20: #ffd09a;
+    --accent-orange-50: #f89f3a;
+    --accent-orange-100: #f78500;
+    --accent-orange-200: #dc6803;
+    --accent-orange-500: #b54708;
+    --accent-orange-1000: #93370d;
+
+    // Feedback Success
+    --feedback-success-10: #d1fadf;
+    --feedback-success-20: #a6f4c5;
+    --feedback-success-50: #32d583;
+    --feedback-success-100: #12b76a;
+    --feedback-success-200: #039855;
+    --feedback-success-500: #027a48;
+    --feedback-success-1000: #05603a;
+
+    // Feedback Warning
+    --feedback-warning-10: #fcf0da;
+    --feedback-warning-20: #f7dba4;
+    --feedback-warning-50: #ffd07b;
+    --feedback-warning-100: #fab841;
+    --feedback-warning-200: #e3a039;
+    --feedback-warning-500: #aa7829;
+    --feedback-warning-1000: #86560b;
+
+    // Feedback Error
+    --feedback-error-10: #fee4e2;
+    --feedback-error-20: #ffc0bb;
+    --feedback-error-50: #f97066;
+    --feedback-error-100: #f04438;
+    --feedback-error-200: #d92d20;
+    --feedback-error-500: #b42318;
+    --feedback-error-1000: #912018;
+
+    // Neutral Gray
+    --neutral-gray-10: #f2f4f7;
+    --neutral-gray-20: #eaecf0;
+    --neutral-gray-50: #d0d5dd;
+    --neutral-gray-100: #98a2b3;
+    --neutral-gray-200: #667085;
+    --neutral-gray-500: #475467;
+    --neutral-gray-1000: #1d2939;
+
+    // Neutral White
+    --neutral-white-100: #f2f4f7;
+
+    // Neutral Black
+    --neutral-black-800: #1d2939;
+
+    // Status
+    --status-success: #1db954;
+    --status-warning: #ff9800;
+    --status-error: #e22134;
+    --status-info: #2e77d0;
+
+    // Status Muted
+    --status-success-muted: #ecfdf5;
+    --status-warning-muted: #fffbeb;
+    --status-error-muted: #fef2f2;
+    --status-info-muted: #f0f6ff;
+
+    // Status Dark
+    --status-success-dark: #065f46;
+    --status-warning-dark: #b45309;
+    --status-error-dark: #991b1b;
+    --status-info-dark: #184caf;
+
+    // box-shadow
+    --box-shadow-xs: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    --box-shadow-sm: 0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+    --box-shadow-base: 0px 1px 4px 0px rgba(16, 24, 40, 0.14);
+    --box-shadow-md: 0px 4px 8px -2px rgba(16, 24, 40, 0.1);
+    --box-shadow-lg: 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+    --box-shadow-xl: 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+    --box-shadow-2xl: 0px 24px 48px -12px rgba(16, 24, 40, 0.18);
+    --box-shadow-3xl: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+    --box-shadow-inner-drop: inset 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+
+    // sidebar
+    // --sidebar-background: 0 0% 98%;
+    // --sidebar-foreground: 240 5.3% 26.1%;
+    // --sidebar-primary: 240 5.9% 10%;
+    // --sidebar-primary-foreground: 0 0% 98%;
+    // --sidebar-accent: 240 4.8% 95.9%;
+    // --sidebar-accent-foreground: 240 5.9% 10%;
+    // --sidebar-border: 220 13% 91%;
+    // --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --sidebar-background: 240 63% 7%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 240 63% 7%;
+    --sidebar-accent: 230 37% 17%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  // .dark {
+  //   --background: 224 71.4% 4.1%;
+  //   --foreground: 210 20% 98%;
+
+  //   --card: 224 71.4% 4.1%;
+  //   --card-foreground: 210 20% 98%;
+
+  //   --popover: 224 71.4% 4.1%;
+  //   --popover-foreground: 210 20% 98%;
+
+  //   --primary: 210 20% 98%;
+  //   --primary-foreground: 220.9 39.3% 11%;
+
+  //   --secondary: 215 27.9% 16.9%;
+  //   --secondary-foreground: 210 20% 98%;
+
+  //   --muted: 215 27.9% 16.9%;
+  //   --muted-foreground: 217.9 10.6% 64.9%;
+
+  //   --accent: 215 27.9% 16.9%;
+  //   --accent-foreground: 210 20% 98%;
+
+  //   --destructive: 0 62.8% 30.6%;
+  //   --destructive-foreground: 210 20% 98%;
+
+  //   --border: 215 27.9% 16.9%;
+  //   --input: 215 27.9% 16.9%;
+  //   --ring: 216 12.2% 83.9%;
+  // }
+}
+
+$gap-size: 16px;
+$background-color: #fff;
+$border-radius: 8px;
+$box-shadow: var(--box-shadow-md);
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Sans', ui-sans-serif, system-ui;
+}
+
+button {
+  font-family: 'IBM Plex Sans', ui-sans-serif, system-ui;
+}
+
+p,
+span,
+li {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.content-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.padded-content {
+  padding: 16px;
+}
+
+@mixin grid-item($start-row, $start-col, $end-row, $end-col) {
+  grid-area: #{$start-row} / #{$start-col} / #{$end-row} / #{$end-col};
+}
+
+.monitoring-dashboard-grafana-grid {
+  display: grid;
+  gap: $gap-size;
+  grid-template-columns: repeat(8, 1fr);
+
+  > * {
+    background: $background-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    height: fit-content;
+    grid-column: span 2;
+
+    &:nth-child(4) {
+      @include grid-item(1, 7, 3, 9);
+    }
+    &:nth-child(5) {
+      @include grid-item(2, 1, 3, 2);
+    }
+    &:nth-child(6) {
+      @include grid-item(2, 2, 3, 3);
+    }
+    &:nth-child(7) {
+      @include grid-item(2, 3, 3, 4);
+    }
+    &:nth-child(8) {
+      @include grid-item(2, 4, 3, 5);
+    }
+    &:nth-child(n + 14):nth-child(-n + 15) {
+      grid-area: span 1 / span 4;
+    }
+  }
+}
+
+.prometheus-dashboard-grafana-grid {
+  display: grid;
+  gap: $gap-size;
+  grid-row: auto 1fr;
+  grid-template-columns: repeat(4, 1fr);
+
+  > * {
+    background: $background-color;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    height: fit-content;
+    grid-column: span 1;
+
+    &:nth-child(5) {
+      @include grid-item(1, 3, 3, 5);
+    }
+    &:nth-child(n + 6):nth-child(-n + 9) {
+      grid-area: span 1 / span 4;
+    }
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.primary-gradient {
+  background: linear-gradient(239deg, #020024 51%, #090979 100%, #00d4ff 0);
+}
+
+.layout_spinner_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+}
+.spinner_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.component_wrapper {
+  border-radius: 8px;
+  border: 1px solid #eaecf0;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06),
+    0px 1px 3px 0px rgba(16, 24, 40, 0.1);
+  width: 100%;
+  overflow: hidden;
+}
+
+.highlight-line {
+  background-color: rgba(255, 255, 0, 0.3); /* Light yellow background */
+  // border-left: 3px solid red; /* Optional: adds a red border to the left */
+}
